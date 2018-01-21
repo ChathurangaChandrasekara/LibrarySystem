@@ -1,0 +1,13 @@
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\obj\Debug\DataHandler.csprojResolveAssemblyReference.cache
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\obj\Debug\DataHandler.csproj.CoreCompileInputs.cache
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\bin\Debug\DataHandler.dll.config
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\bin\Debug\DataHandler.dll
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\bin\Debug\DataHandler.pdb
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\bin\Debug\EntityFramework.dll
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\bin\Debug\model.dll
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\bin\Debug\model.pdb
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\bin\Debug\EntityFramework.xml
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\obj\Debug\DataHandler.dll
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\DataHandler\obj\Debug\DataHandler.pdb

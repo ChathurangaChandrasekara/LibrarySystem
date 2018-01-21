@@ -1,0 +1,13 @@
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\obj\Debug\BusinesLogic.csproj.CoreCompileInputs.cache
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\bin\Debug\BusinesLogic.dll
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\bin\Debug\BusinesLogic.pdb
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\bin\Debug\DataHandler.dll
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\bin\Debug\model.dll
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\bin\Debug\EntityFramework.dll
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\bin\Debug\DataHandler.pdb
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\bin\Debug\DataHandler.dll.config
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\bin\Debug\model.pdb
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\bin\Debug\EntityFramework.xml
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\obj\Debug\BusinesLogic.csprojResolveAssemblyReference.cache
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\obj\Debug\BusinesLogic.dll
+C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\obj\Debug\BusinesLogic.pdb

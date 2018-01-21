@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LibraryProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Book">
+    <Key>
+      <PropertyRef Name="book_id" />
+    </Key>
+    <Property Name="book_id" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="book_name" Type="nvarchar" MaxLength="50" />
+    <Property Name="author" Type="nvarchar" MaxLength="50" />
+    <Property Name="published_date" Type="date" />
+    <Property Name="price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="category" Type="nvarchar" MaxLength="20" />
+    <Property Name="existing_state" Type="char" MaxLength="3" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'LibraryProject.dbo.Library' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Library">
+    <Key>
+      <PropertyRef Name="user_id" />
+      <PropertyRef Name="user_password" />
+    </Key>
+    <Property Name="user_id" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="user_password" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="nic" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="100" />
+    <Property Name="nic" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="telephone_number" Type="nchar" MaxLength="10" />
+    <Property Name="address" Type="nvarchar" MaxLength="50" />
+    <Property Name="book_id" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_User_Book">
+    <End Role="Book" Type="Self.Book" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="book_id" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="book_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LibraryProjectModelStoreContainer">
+    <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Library" EntityType="Self.Library" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Library].[user_id] AS [user_id], 
+    [Library].[user_password] AS [user_password]
+    FROM [dbo].[Library] AS [Library]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_User_Book" Association="Self.FK_User_Book">
+      <End Role="Book" EntitySet="Book" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

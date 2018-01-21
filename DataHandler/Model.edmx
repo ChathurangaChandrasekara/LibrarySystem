@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LibraryProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="book_id" />
+          </Key>
+          <Property Name="book_id" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="book_name" Type="nvarchar" MaxLength="50" />
+          <Property Name="author" Type="nvarchar" MaxLength="50" />
+          <Property Name="published_date" Type="date" />
+          <Property Name="price" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="category" Type="nvarchar" MaxLength="20" />
+          <Property Name="existing_state" Type="char" MaxLength="3" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'LibraryProject.dbo.Library' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Library">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="user_password" />
+          </Key>
+          <Property Name="user_id" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="user_password" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="nic" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+          <Property Name="nic" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="telephone_number" Type="nchar" MaxLength="10" />
+          <Property Name="address" Type="nvarchar" MaxLength="50" />
+          <Property Name="book_id" Type="nchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK_User_Book">
+          <End Role="Book" Type="Self.Book" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Book">
+              <PropertyRef Name="book_id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="book_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LibraryProjectModelStoreContainer">
+          <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Library" EntityType="Self.Library" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [Library].[user_id] AS [user_id], 
+    [Library].[user_password] AS [user_password]
+    FROM [dbo].[Library] AS [Library]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_User_Book" Association="Self.FK_User_Book">
+            <End Role="Book" EntitySet="Book" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LibraryProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Book">
+          <Key>
+            <PropertyRef Name="book_id" />
+          </Key>
+          <Property Name="book_id" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="book_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="published_date" Type="DateTime" Precision="0" />
+          <Property Name="price" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="category" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="existing_state" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_User_Book" FromRole="Book" ToRole="User" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="nic" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="nic" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="telephone_number" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="book_id" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Book" Relationship="Self.FK_User_Book" FromRole="User" ToRole="Book" />
+        </EntityType>
+        <EntityType Name="Library">
+          <Key>
+            <PropertyRef Name="user_id" />
+            <PropertyRef Name="user_password" />
+          </Key>
+          <Property Name="user_id" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="user_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_User_Book">
+          <End Role="Book" Type="Self.Book" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Book">
+              <PropertyRef Name="book_id" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="book_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="LibraryProjectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Books" EntityType="Self.Book" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Libraries" EntityType="Self.Library" />
+          <AssociationSet Name="FK_User_Book" Association="Self.FK_User_Book">
+            <End Role="Book" EntitySet="Books" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LibraryProjectModelStoreContainer" CdmEntityContainer="LibraryProjectEntities">
+          <EntitySetMapping Name="Books">
+            <EntityTypeMapping TypeName="LibraryProjectModel.Book">
+              <MappingFragment StoreEntitySet="Book">
+                <ScalarProperty Name="book_id" ColumnName="book_id" />
+                <ScalarProperty Name="book_name" ColumnName="book_name" />
+                <ScalarProperty Name="author" ColumnName="author" />
+                <ScalarProperty Name="published_date" ColumnName="published_date" />
+                <ScalarProperty Name="price" ColumnName="price" />
+                <ScalarProperty Name="category" ColumnName="category" />
+                <ScalarProperty Name="existing_state" ColumnName="existing_state" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="LibraryProjectModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="nic" ColumnName="nic" />
+                <ScalarProperty Name="telephone_number" ColumnName="telephone_number" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="book_id" ColumnName="book_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Libraries">
+            <EntityTypeMapping TypeName="LibraryProjectModel.Library">
+              <MappingFragment StoreEntitySet="Library">
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="user_password" ColumnName="user_password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
