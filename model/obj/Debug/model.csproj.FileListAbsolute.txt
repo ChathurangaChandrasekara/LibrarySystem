@@ -3,3 +3,13 @@ C:\Users\Mr Chathuranga\source\repos\LibrarySystem\model\bin\Debug\model.dll
 C:\Users\Mr Chathuranga\source\repos\LibrarySystem\model\bin\Debug\model.pdb
 C:\Users\Mr Chathuranga\source\repos\LibrarySystem\model\obj\Debug\model.dll
 C:\Users\Mr Chathuranga\source\repos\LibrarySystem\model\obj\Debug\model.pdb
+E:\GitClone\LibrarySystem\model\bin\Debug\model.dll.config
+E:\GitClone\LibrarySystem\model\bin\Debug\model.dll
+E:\GitClone\LibrarySystem\model\bin\Debug\model.pdb
+E:\GitClone\LibrarySystem\model\bin\Debug\EntityFramework.dll
+E:\GitClone\LibrarySystem\model\bin\Debug\EntityFramework.SqlServer.dll
+E:\GitClone\LibrarySystem\model\bin\Debug\EntityFramework.xml
+E:\GitClone\LibrarySystem\model\bin\Debug\EntityFramework.SqlServer.xml
+E:\GitClone\LibrarySystem\model\obj\Debug\model.csproj.CoreCompileInputs.cache
+E:\GitClone\LibrarySystem\model\obj\Debug\model.dll
+E:\GitClone\LibrarySystem\model\obj\Debug\model.pdb

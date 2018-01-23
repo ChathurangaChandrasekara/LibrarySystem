@@ -11,3 +11,7 @@ C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\bin\Debug\Entity
 C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\obj\Debug\BusinesLogic.csprojResolveAssemblyReference.cache
 C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\obj\Debug\BusinesLogic.dll
 C:\Users\Mr Chathuranga\source\repos\LibrarySystem\BusinesLogic\obj\Debug\BusinesLogic.pdb
+E:\GitClone\LibrarySystem\BusinesLogic\obj\Debug\BusinesLogic.csprojResolveAssemblyReference.cache
+E:\GitClone\LibrarySystem\BusinesLogic\obj\Debug\BusinesLogic.csproj.CoreCompileInputs.cache
+E:\GitClone\LibrarySystem\BusinesLogic\obj\Debug\BusinesLogic.dll
+E:\GitClone\LibrarySystem\BusinesLogic\obj\Debug\BusinesLogic.pdb

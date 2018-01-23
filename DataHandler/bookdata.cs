@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataHandler
 {
-    class booklogic
+    class BookData
     {
         LibraryProjectEntities db = new LibraryProjectEntities();
         public void Addbook(model.bookDto obj)

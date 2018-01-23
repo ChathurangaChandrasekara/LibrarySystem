@@ -19,3 +19,17 @@ C:\Users\Mr Chathuranga\source\repos\LibrarySystem\LibrarySystem\bin\Debug\Busin
 C:\Users\Mr Chathuranga\source\repos\LibrarySystem\LibrarySystem\bin\Debug\model.dll
 C:\Users\Mr Chathuranga\source\repos\LibrarySystem\LibrarySystem\bin\Debug\BusinesLogic.pdb
 C:\Users\Mr Chathuranga\source\repos\LibrarySystem\LibrarySystem\bin\Debug\model.pdb
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.csprojResolveAssemblyReference.cache
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.Add_Book.resources
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.AddUser.resources
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.Book.resources
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.FindBook.resources
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.LibraryLogin.resources
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.Properties.Resources.resources
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.FindUser.resources
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.User.resources
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.View.resources
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.csproj.GenerateResource.Cache
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.csproj.CoreCompileInputs.cache
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.exe
+E:\GitClone\LibrarySystem\LibrarySystem\obj\Debug\LibrarySystem.pdb
