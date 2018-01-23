@@ -15,8 +15,17 @@ namespace BusinesLogic
 
         public void addbooklogic(bookDto obj)
         {
-            BookData bookdata = new BookData();
-            bookdata(obj);
+            bookDto bobj = new bookDto();
+            bobj.author = obj.author;
+            bobj.book_id = obj.book_id;
+            bobj.book_name = obj.book_name;
+            bobj.category = obj.category;
+            bobj.price = obj.price;
+            bobj.published_date = obj.published_date;
+
+
+
+
 
 
         }
